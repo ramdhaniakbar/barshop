@@ -6,4 +6,5 @@ MERN shopping cart app
   - Expressjs
   - Mongodb
   - Bootstrap
+  - Redux
   - React router
