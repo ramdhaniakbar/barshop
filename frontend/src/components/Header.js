@@ -20,7 +20,7 @@ const Header = () => {
 					>
 						<span className='navbar-toggler-icon'></span>
 					</button>
-					<div className='collapse navbar-collapse' id='navbarNav'>
+					<div className='collapse navbar-collapse ms-3' id='navbarNav'>
 						<ul className='navbar-nav ms-auto'>
 							<li className='nav-item me-2'>
 								<NavLink
@@ -28,7 +28,7 @@ const Header = () => {
 									className='nav-link'
 									aria-current='page'
 								>
-									<i className='fas fa-shopping-cart'></i> Troli
+									<i className='fas fa-shopping-cart'></i> Keranjang
 								</NavLink>
 							</li>
 							<li className='nav-item'>

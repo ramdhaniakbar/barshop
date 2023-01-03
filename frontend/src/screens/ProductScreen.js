@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NumericFormat } from 'react-number-format';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Rating from '../components/Rating';
 import axios from 'axios';
@@ -9,9 +9,11 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 
 const ProductScreen = () => {
-	const { id } = useParams();
+	const [qty, setQty] = useState(1);
 
+	const { id } = useParams();
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	const productDetails = useSelector((state) => state.productDetails);
 	const { loading, error, product } = productDetails;
@@ -19,6 +21,10 @@ const ProductScreen = () => {
 	useEffect(() => {
 		dispatch(listProductDetails(id));
 	}, [dispatch, id]);
+
+	const addToCartHandler = () => {
+		navigate(`/cart/${id}?qty=${qty}`);
+	};
 
 	return (
 		<>
@@ -93,13 +99,37 @@ const ProductScreen = () => {
 										</div>
 									</div>
 								</li>
+								{product.countInStock > 0 && (
+									<li className='list-group-item px-4 py-3'>
+										<div className='row'>
+											<div className='col list-text'>Qty: </div>
+											<div className='col list-text'>
+												<select
+													className='form-select'
+													aria-label='Default select example'
+													value={qty}
+													onChange={(e) => setQty(e.target.value)}
+												>
+													{[
+														...Array(product.countInStock).keys(),
+													].map((x) => (
+														<option key={x + 1} value={x + 1}>
+															{x + 1}
+														</option>
+													))}
+												</select>
+											</div>
+										</div>
+									</li>
+								)}
 								<li className='list-group-item px-4 py-3'>
 									<button
+										onClick={addToCartHandler}
 										className='btn btn-light py-2 w-100'
 										type='button'
 										disabled={product.countInStock === 0}
 									>
-										Tambah Ke Troli
+										Tambah Ke Keranjang
 									</button>
 								</li>
 							</ul>

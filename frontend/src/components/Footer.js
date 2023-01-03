@@ -4,7 +4,7 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className='py-5 text-center'>
-				<span>Copyright &copy; ProShop</span>
+				<span>Copyright &copy; barshop</span>
 			</div>
 		</footer>
 	);

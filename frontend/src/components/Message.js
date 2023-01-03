@@ -3,7 +3,7 @@ import React from 'react';
 const Message = ({ variant, children }) => {
 	return (
 		<div
-			class={`alert alert-${variant} d-flex align-items-center`}
+			className={`alert alert-${variant} d-flex align-items-center`}
 			role='alert'
 		>
 			<div>{children}</div>
@@ -12,7 +12,7 @@ const Message = ({ variant, children }) => {
 };
 
 Message.defaultProps = {
-	variant: 'alert-info',
+	variant: 'info',
 };
 
 export default Message;
