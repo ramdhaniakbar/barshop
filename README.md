@@ -2,9 +2,9 @@
 MERN shopping cart app
 
 # Technology used
-  - Reactjs
-  - Expressjs
-  - Mongodb
+  - React
+  - Express
+  - MongoDB
   - Bootstrap
   - Redux
-  - React router
+  - React Router
