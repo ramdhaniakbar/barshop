@@ -1,6 +1,5 @@
 const products = [
 	{
-		_id: '1',
 		name: 'Headphone Bluetooth Wireless Airpods',
 		image: '/images/airpods.jpg',
 		description:
@@ -13,7 +12,6 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: '2',
 		name: 'iPhone 11 Pro Memori 256GB',
 		image: '/images/phone.jpg',
 		description:
@@ -26,7 +24,6 @@ const products = [
 		numReviews: 8,
 	},
 	{
-		_id: '3',
 		name: 'Kamera DSLR Canon EOS 80D',
 		image: '/images/camera.jpg',
 		description:
@@ -39,7 +36,6 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: '4',
 		name: 'Sony Playstation 4 Pro Versi Putih',
 		image: '/images/playstation.jpg',
 		description:
@@ -52,7 +48,6 @@ const products = [
 		numReviews: 12,
 	},
 	{
-		_id: '5',
 		name: 'Mouse Gaming Logitech G-Series',
 		image: '/images/mouse.jpg',
 		description:
@@ -65,7 +60,6 @@ const products = [
 		numReviews: 10,
 	},
 	{
-		_id: '6',
 		name: 'Amazon Echo Dot Generasi ke-3',
 		image: '/images/alexa.jpg',
 		description:
