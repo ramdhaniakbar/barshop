@@ -1,0 +1,22 @@
+{
+	"name": "barshop",
+	"version": "1.0.0",
+	"description": "MERN shopping cart app",
+	"main": "server.js",
+	"type": "module",
+	"scripts": {
+		"start": "node backend/server",
+		"server": "nodemon backend/server",
+		"client": "npm start --prefix frontend",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"author": "Ramdhani Akbar",
+	"license": "MIT",
+	"dependencies": {
+		"concurrently": "^7.6.0",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"mongoose": "^6.8.2",
+		"nodemon": "^2.0.20"
+	}
+}
